@@ -4,16 +4,57 @@ Faça você mesmo
 ---
 
 1.Crie duas variáveis Ana e Paulo e atribua a elas valores de suas idades, sendo respectivamente 8 e 12 anos. As variáveis devem ser do tipo inteiro. Imprima no console "A menina é mais velha" ou "O menino é mais velho" como resultado de um teste lógico.
+```{R}
+ana <- 8L
+paulo <- 12L
+ifelse(ana > paulo, "A menina é mais velha", "O menino é mais velho")
+```
 
 BOD é um objeto existente no R. Verifique qual a classe deste objeto.
+```{R}
+class(BOD)
+```
 
 Crie um vetor que armazene números de 1 a 10 e posteriormente imprima os valores pares
+```{R}
+vetor <- c()
+for (i in 1:10) {
+  vetor <- c(vetor, i)
+}
+
+for (i in vetor) {
+  if (i %% 2 == 0) {
+    print(i)
+  }
+}
+```
 
 women é um dataframe existente no R. Imprima as 10 últimas linhas
+```{R}
+df <- women
+tail(df, n=10)
+```
 
 Use a função plot do R para produzir um gráfico do atributos Sepal.Width e Petal.Length do conjunto de dados Iris. O gráfico deve imprimir apenas das linhas 50 até 100.
+```{R}
+
+```
 
 Crie dois vetores de tamanhos iguais, some as posições equivalentes dos vetores e imprima o resultado.
+```{R}
+vetor1 <- c()
+vetor2 <- c()
+vetor3 <- c()
+for (i in 1:20) {
+  vetor1[i] <- i
+  vetor2[i] <- (i + i) * 2
+}
+
+for (i in 1:length(vetor1)){
+  vetor3[i] <- vetor1[i] + vetor2[i]
+}
+print(vetor3)
+```
 
 Imprima o número de linhas, de colunas, nomes das linhas e nome das colunas do conjunto de dados CO2.
 
