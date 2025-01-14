@@ -60,7 +60,6 @@ print(vetor1 + vetor2)
 ```
 
 Imprima o número de linhas, de colunas, nomes das linhas e nome das colunas do conjunto de dados CO2.
-
 ```{R}
 dim(CO2)[1]
 dim(CO2)[2]
