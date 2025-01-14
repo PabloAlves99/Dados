@@ -37,7 +37,8 @@ tail(df, n=10)
 
 Use a função plot do R para produzir um gráfico do atributos Sepal.Width e Petal.Length do conjunto de dados Iris. O gráfico deve imprimir apenas das linhas 50 até 100.
 ```{R}
-
+nova_iris <- iris[50:100, c(2, 3)]
+plot(nova_iris)
 ```
 
 Crie dois vetores de tamanhos iguais, some as posições equivalentes dos vetores e imprima o resultado.
