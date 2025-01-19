@@ -1,1 +1,58 @@
-todos os arquivos
+# Ignorar ambientes virtuais Python
+venv/
+venvDados/
+
+# Ignorar arquivos de metadados Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Ignorar arquivos de pacotes
+*.egg
+*.egg-info/
+dist/
+build/
+*.egg-info/
+
+# Ignorar arquivos de logs e outros arquivos de saída
+*.log
+*.out
+*.txt
+
+# Ignorar configurações locais
+.env
+*.env
+
+# Ignorar arquivos de cache e outros arquivos de IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Ignorar arquivos Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignorar arquivos de depuração
+*.pdb
+
+# Ignorar arquivos de pacotes e dependências R
+.Rhistory
+.RData
+.Rproj.user/
+.Rproj.user
+.Ruserdata
+.Rbuildignore
+
+# Ignorar binários e arquivos temporários
+*.o
+*.so
+*.dylib
+
+# Ignorar arquivos específicos de configuração e dependências R
+.Rproj
+*.Rproj
+
+# Ignorar outras pastas e arquivos específicos
+venvDados/**/*
+todos os arquivos/
