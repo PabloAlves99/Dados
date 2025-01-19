@@ -3,3 +3,12 @@ Formação Cientista de Dados
 Limpeza e Tratamento de Dados
 ---
 
+```{r}
+tempo = read.csv("tempo.csv", sep = ";", na.strings="", stringsAsFactors=T)
+tempo[tempo$Aparencia == "menos", ]$Aparencia = "nublado"
+tempo[tempo$Temperatura < 0 | tempo$Temperatura > 130, ]$Temperatura = median(tempo$Temperatura)
+tempo[tempo$Umidade < 0 | tempo$Umidade > 100 | is.na(tempo$Umidade), ]$Umidade = median(tempo$Umidade, na.rm = TRUE)
+tempo[is.na(tempo$Vento), ]$Vento = "VERDADEIRO"
+head(tempo)
+summary(tempo)
+```
