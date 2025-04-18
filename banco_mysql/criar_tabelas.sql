@@ -136,3 +136,12 @@ where categoria = 'tecnologia' and PREÇO between 50 and 70;
 select NOME_LIVRO as 'NOME DOS LIVROS', PREÇO from LIVROS
 where NOME_LIVRO like '%python'
 
+-- Alterando e deletando dados
+
+delete from ESTOQUE where ID_LIVRO = 5;
+delete from ESTOQUE where ID_LIVRO = 5;
+delete from VENDAS where ID_LIVRO = 5;
+delete from LIVROS where ID_LIVRO = 5;
+
+update LIVROS set PREÇO = 0.80*PREÇO where CATEGORIA = 'tecnologia';
+update LIVROS set PREÇO = 0.70*PREÇO where EDITORA = 'Clássicos' and PREÇO > 20;
