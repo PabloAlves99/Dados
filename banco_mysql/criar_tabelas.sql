@@ -121,5 +121,18 @@ INSERT INTO VENDAS (ID_PEDIDO, ID_VENDEDOR, ID_LIVRO, QTD_VENDIDA, DATA_VENDA) V
 
 -- Visualizar dados
 
-select NOME_LIVRO as 'Nome dos Livros' from livros;
-select NOME_LIVRO as 'Nome dos Livros', AUTORIA as 'Autor' from livros;
+select NOME_LIVRO as 'Nome dos Livros' from LIVROS;
+select NOME_LIVRO as 'Nome dos Livros', AUTORIA as 'Autor' from liLIVROSvros;
+
+select NOME_LIVRO as 'NOME DOS LIVROS' from LIVROS
+where categoria = 'tecnologia';
+
+select NOME_LIVRO as 'NOME DOS LIVROS', PREÇO from LIVROS
+where categoria = 'tecnologia' and PREÇO < 70;
+
+select NOME_LIVRO as 'NOME DOS LIVROS', PREÇO from LIVROS
+where categoria = 'tecnologia' and PREÇO between 50 and 70;
+
+select NOME_LIVRO as 'NOME DOS LIVROS', PREÇO from LIVROS
+where NOME_LIVRO like '%python'
+
