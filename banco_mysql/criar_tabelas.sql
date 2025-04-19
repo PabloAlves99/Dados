@@ -145,3 +145,24 @@ delete from LIVROS where ID_LIVRO = 5;
 
 update LIVROS set PREÇO = 0.80*PREÇO where CATEGORIA = 'tecnologia';
 update LIVROS set PREÇO = 0.70*PREÇO where EDITORA = 'Clássicos' and PREÇO > 20;
+
+-- Consultas com JOIN
+
+select 
+    vv.NOME_VENDEDOR as 'Nome do Vendedor',
+    ve.QTD_VENDIDA as 'Quantidade Vendida',
+    ll.NOME_LIVRO as 'Nome do Livro'
+from VENDAS ve
+join VENDEDORES vv on ve.ID_VENDEDOR = vv.ID_VENDEDOR
+join LIVROS ll on ve.ID_LIVRO = ll.ID_LIVRO
+
+
+SELECT 
+    vv.NOME_VENDEDOR AS 'Nome do Vendedor',
+    SUM(ve.QTD_VENDIDA) AS 'Total Vendido'
+FROM 
+    VENDAS ve
+JOIN 
+    VENDEDORES vv ON ve.ID_VENDEDOR = vv.ID_VENDEDOR
+GROUP BY 
+    vv.NOME_VENDEDOR;
